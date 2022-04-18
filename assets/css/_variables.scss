@@ -1,0 +1,139 @@
+/* OPTIONS */
+
+$enable-grid-classes                            : true !default;
+
+
+/* COLORS */
+
+$palette: (
+        'orange': (
+                '100'   :   #FFAB00,
+                '200'   :   #FF9C01,
+                '300'   :   #F7620F
+        ),
+        'grey-blue': (
+                '50'    :   #EEEFF2,
+                '100'   :   #768C9B,
+                '200'   :   #4E5C66,
+                '300'   :   #0E283C
+        ),
+        'grey': (
+                '100'   :   #565656,
+                '200'   :   #414141
+        ),
+        'black'         :   #000000,
+        'white'         :   #FFFFFF
+) !global;
+
+$white                  : set_color('white');
+$black                  : set_color('black');
+$orange-100             : set_color('orange', '100');
+$orange-200             : set_color('orange', '200');
+$orange-300             : set_color('orange', '300');
+$grey-blue-50           : set_color('grey-blue', '50');
+$grey-blue-100          : set_color('grey-blue', '100');
+$grey-blue-200          : set_color('grey-blue', '200');
+$grey-blue-300          : set_color('grey-blue', '300');
+$grey-100               : set_color('grey', '100');
+$grey-200               : set_color('grey', '200');
+
+/*FONT FAMILY*/
+$ubuntu                 : 'Ubuntu', sans-serif;
+$roboto                 : 'Roboto', sans-serif;
+$fontello               : 'fontello';
+
+/*FONT STYLE*/
+$font-style-normal      : normal !default;
+$font-style-italic      : italic !default;
+
+/*FONT WEIGHT*/
+$font-weight-400        : 400 !default;
+$font-weight-500        : 500 !default;
+$font-weight-600        : 600 !default;
+$font-weight-700        : 700 !default;
+$font-weight-900        : 900 !default;
+
+/* SIZES */
+$sizes: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%
+) !global;
+
+$spacer: 16px !global;
+$spacers: (
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: ($spacer * .75),
+        4: $spacer,
+        5: ($spacer * 1.25),
+        6: ($spacer * 1.5),
+        7: ($spacer * 1.75),
+        8: ($spacer * 2),
+        9: ($spacer * 2.25),
+        10: ($spacer * 2.5),
+        11: ($spacer * 2.75),
+        12: ($spacer * 3),
+        13: ($spacer * 3.25),
+        14: ($spacer * 3.5),
+        15: ($spacer * 3.75),
+        16: ($spacer * 4),
+        17: ($spacer * 4.25),
+        18: ($spacer * 4.5),
+        19: ($spacer * 4.75),
+        20: ($spacer * 5)
+) !global;
+
+$grid-breakpoints: (
+        xs: 0,
+        md: 768px,
+        xl: 1440px
+) !global;
+
+$container-max-widths: (
+        md: 570px,
+        xl: 1140px
+) !global;
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+$grid-row-columns:            6 !default;
+
+$body-bg: $white !default;
+
+/* SHADOWS */
+$shadow-accordion       : 4px 4px 30px rgba(0, 0, 0, 0.1);
+$shadow-form            : 0px 4px 40px rgba(0, 0, 0, 0.1);
+
+/* BORDER RADIUS */
+$border-radius-5        : 5px !default;
+$border-radius-8        : 8px !default;
+$border-radius-15       : 15px !default;
+$border-radius-30       : 30px !default;
+$border-radius-50       : 50px !default;
+$border-radius-100      : 100px !default;
+
+/* OPACITY */
+$opacity12              : 0.12 !default;
+$opacity4               : 0.4 !default;
+$opacity5               : 0.5 !default;
+$opacity6               : 0.6 !default;
+$opacity8               : 0.8 !default;
+$opacity9               : 0.9 !default;
+
+/* ANIMATIONS */
+$transition             : 150ms ease-in-out !default;
+$transition-base        : all .2s ease-in-out !default;
+$transition-fade        : opacity .15s linear !default;
+$transition-collapse    : height .35s ease !default;
+
+/* UTILITIES */
+
+$displays               : none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+$overflows              : auto, hidden !default;
+$positions              : static, relative, absolute, fixed, sticky !default;
+$user-selects           : all, auto, none !default;
+$zindex-modal           : 7040;
+$zindex-modal-backdrop  : 7020 !default;

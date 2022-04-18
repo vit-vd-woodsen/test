@@ -1,0 +1,12 @@
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 2090;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: transparent;
+    &.active {
+        background: $orange-100;
+    }
+}

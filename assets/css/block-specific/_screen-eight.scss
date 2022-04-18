@@ -1,0 +1,172 @@
+.screen-eight {
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 120px;
+    @include media-breakpoint-down(md) {
+        margin-bottom: 51px;
+        margin-top: -60px;
+        z-index: 1070;
+    }
+    @include media-breakpoint-down(xs) {
+        margin-top: 27px;
+        margin-bottom: 26px;
+    }
+    &__content {
+        .feedback-form {
+            background: $white;
+            -webkit-box-shadow: $shadow-form;
+                    box-shadow: $shadow-form;
+            border-radius: $border-radius-15;
+            padding: 30px;
+            @include media-breakpoint-down(md) {
+                padding: 18px 30px;
+                max-width: 410px;
+                margin: auto;
+            }
+            @include media-breakpoint-down(xs) {
+                -webkit-box-shadow: none;
+                        box-shadow: none;
+                padding: 0;
+                border-radius: 0;
+            }
+            &__title {
+                font-family: $ubuntu;
+                font-style: $font-style-normal;
+                font-weight: $font-weight-700;
+                font-size: 32px;
+                line-height: 98.9%;
+                color: $grey-200;
+                letter-spacing: -0.03em;
+                text-transform: uppercase;
+                color: $grey-200;
+                @include media-breakpoint-down(md) {                    
+                    font-size: 16px;
+                }
+                @include media-breakpoint-down(xs) {
+                    font-size: 13px;
+                    line-height: 98.9%;
+                }
+                > img {
+                    width: 30px;
+                    height: 30px;
+                    margin-left: 10px;
+                    @include media-breakpoint-down(xs) {
+                        width: 13px;
+                        height: 13px;
+                        margin-left: 5px;
+                    }
+                }
+                + .feedback-form {
+                    &__description {
+                        margin-top: 10px;
+                        @include media-breakpoint-down(md) {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+            &__description {
+                font-family: $roboto;
+                font-style: $font-style-normal;
+                font-weight: $font-weight-400;
+                font-size: 14px;
+                line-height: 150%;
+                color: $grey-200;
+                @include media-breakpoint-down(xs) {
+                    font-size: 13px;
+                }
+            }
+            &__form {
+                margin-top: 20px;
+                @include media-breakpoint-down(md) {
+                    margin-top: 15px;
+                }
+                .form {
+                    &__content {
+                        > input {
+                            -ms-flex-preferred-size: 100%;
+                                flex-basis: 100%;
+                            background-color: $grey-blue-50;
+                            border-radius: $border-radius-8;
+                            font-family: $roboto;
+                            font-style: $font-style-normal;
+                            font-weight: $font-weight-400;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: $grey-blue-300;
+                            border: none;
+                            outline: none;
+                            padding: 11px;
+                            &::-webkit-input-placeholder {
+                                color: $grey-blue-200;
+                            }
+                            &::-moz-placeholder {
+                                color: $grey-blue-200;
+                            }
+                            &:-ms-input-placeholder {
+                                color: $grey-blue-200;
+                            }
+                            &:-moz-placeholder {
+                                color: $grey-blue-200;
+                            }
+                            + input {
+                                margin-left: 30px;
+                                @include media-breakpoint-down(md) {
+                                    margin-left: 0;
+                                    margin-top: 15px;
+                                }
+                            }
+                            + button {
+                                margin-left: 30px;
+                                @include media-breakpoint-down(md) {
+                                    margin-left: 0;
+                                    margin-top: 15px;
+                                }
+                            }
+                        }
+                        > button {
+                            -ms-flex-preferred-size: 100%;
+                                flex-basis: 100%;
+                            max-width: 195px;
+                            background-color: $orange-300;
+                            border-radius: $border-radius-8;
+                            font-family: $roboto;
+                            font-style: $font-style-normal;
+                            font-weight: $font-weight-700;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: $white;
+                            letter-spacing: 0.02em;
+                            text-transform: uppercase;
+                            text-align: center;
+                            padding: 25px 50px;
+                            cursor: pointer;
+                            @include media-breakpoint-down(md) {
+                                max-width: 100%;
+                                padding: 11px;
+                            }
+                        }
+                    }
+                    &__footnote {
+                        font-family: $roboto;
+                        font-style: $font-style-normal;
+                        font-weight: $font-weight-400;
+                        font-size: 14px;
+                        line-height: 150%;
+                        color: $grey-100;
+                        margin-top: -18px;
+                        @include media-breakpoint-down(md) {
+                            font-size: 12px;
+                            line-height: 14px;
+                            margin-top: 15px;
+                        }
+                        a {
+                            color: $grey-100;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

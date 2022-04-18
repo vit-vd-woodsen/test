@@ -1,0 +1,29 @@
+@function set_color($color-name, $grade-name:null) {
+  $color: null;
+  $color-map: if(
+          $condition: global_variable_exists(palette) and map_has_key($palette, $color-name),
+          $if-true: map_get($palette, $color-name),
+          $if-false: null
+  );
+  @if type_of($color-map)=='map' and $grade-name!=null and map_has_key($color-map,$grade-name) {
+    $color: map_get($color-map, $grade-name);
+    @return $color;
+  }
+  @else if type_of($color-map)=='map' and $grade-name==null {
+    $grade-name: '500';
+    $color: map_get($color-map, $grade-name);
+    @return $color;
+  }
+  @else if type_of($color-map)!='map' and $grade-name==null {
+    $color: map_get($palette, $color-name);
+    @return $color;
+  }
+  @else {
+    @warn
+            "Wrong type of $color-map: #{type_of($color-map)}, which might mean one of the following: \
+          1) Global $palette doesn't exist; \
+          2) Wrong name of the first argument $color-name: #{$color-name}; \
+          3) Second argument $grade-name is null."
+  }
+  @return $color;
+}
